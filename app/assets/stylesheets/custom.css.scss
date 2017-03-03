@@ -3,5 +3,51 @@
 
 body{
 
-	background-color: blue;
+	background-color: grey;
 }
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+  padding-top: 1%
+
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  h1{
+    color: black;
+    font-weight: bold;
+    font-size: 55px;
+  }
+  p{
+      color:black;
+      
+      font-size: 25px;
+    }
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+	  background-size: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+.container-contact{
+ /* padding-top: 2.5%;*/
+}
+
+.col-md-4:nth-child(3n+1){
+  clear: left;
+}
+

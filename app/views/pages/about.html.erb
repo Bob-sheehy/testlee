@@ -1,2 +1,43 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+       <%= image_tag("https://s3-eu-west-1.amazonaws.com/leeamatsu/amatsu.jpg")%>
+      <div class="carousel-caption">
+<h1>Amatsu Body Alignment Clinic</h1>
+              <p>"Creating a shape where injury doesnt exist"</p>   </br></br></br></br></p>   </div>
+    </div>
+    <div class="item">
+      <%= image_tag("https://s3-eu-west-1.amazonaws.com/leeamatsu/amatsu2.jpg")%>
+      <div class="carousel-caption">
+         <h1>Amatsu Body Alignment Clinic</h1>
+              <p>"Creating a shape where injury doesnt exist"
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p></p></br></br></br></br></p></br></br>      </div>
+    </div>
+    <div class="item">
+      <%= image_tag("https://s3-eu-west-1.amazonaws.com/leeamatsu/amatsu3.jpg")%>
+      <div class="carousel-caption">
+ <h1>Amatsu Body Alignment Clinic</h1>
+              <p>"Creating a shape where injury doesnt exist"
+              <p><a class="btn btn-lg btn-primary" href="/contacts/new" role="button">Learn more</a></p></p></br></br></br></br></p></br></br>      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
