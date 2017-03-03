@@ -1,42 +1,82 @@
-<%= form_for(contact) do |f| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+<div class="row">
+  <div class="col-md-6">
+  
 
-      <ul>
-      <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <%= form_for(contact) do |f| %>
+
+                <% if contact.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+                    <ul>
+                    <% contact.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+   
+
+
+       <div class="panel panel-default">
+       <div class="panel-heading">
+            <h1 class="panel-title">Contact Me</h1>
+      </div>
+ 
+      <div class="panel-body">
+          
+          <div class="form-group">
+            <%= f.label :firstname %>
+            <%= f.text_field :firstname, class: "form-control" %>
+          </div>
+
+         <div class="form-group">
+            <%= f.label :lastname %>
+            <%= f.text_field :lastname, class: "form-control"  %>
+          </div>
+
+         <div class="form-group">
+            <%= f.label :comment %>
+            <%= f.text_area :comment, class: "form-control"  %>
+          </div>
+
+        <div class="form-group">
+            <%= f.label :mobile %>
+            <%= f.number_field :mobile, class: "form-control"  %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: "form-control"  %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="panel panel-default">
+       <div class="panel-heading">
+       <h3 class="panel-title">Location</h3>
+      </div>
+  
+       <div class="panel-body">
+    
+ 
+   
+    <div class="col-md-6">
+     
+        <iframe width="500" height="425" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=rathnew%20gaa&key=AIzaSyBnl2ei9l1gG7qo9zpdLsIGIniqV1LCUpA " allowfullscreen></iframe> 
     </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :firstname %>
-    <%= f.text_field :firstname, class: "form-control" %>
   </div>
+</div>
+ </div>
+</div>
 
- <div class="form-group">
-    <%= f.label :lastname %>
-    <%= f.text_field :lastname, class: "form-control"  %>
-  </div>
+<% end %></br>
+  
 
- <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_area :comment, class: "form-control"  %>
-  </div>
 
-<div class="form-group">
-    <%= f.label :mobile %>
-    <%= f.number_field :mobile, class: "form-control"  %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control"  %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit class: "btn btn-primary" %>
-  </div>
-<% end %>
