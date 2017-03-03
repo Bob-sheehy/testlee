@@ -16,7 +16,7 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-       <td> <%= image_tag blog.image.url(:thumb) %></td>
+       <td> <%= image_tag blog.pic.url %></td>
         <td><%= blog.title %></td>
         <td><%= blog.description %></td>
         <td><%= blog.author %></td>
